@@ -17,4 +17,5 @@ app.use("/user", UserRouter);
 app.use("/class", ClassRouter);
 app.use("/", IndexRouter);
 
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+var server=app.listen(PORT,function() {});
