@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../components/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../components/header'); %>
+</header>
+
+<main>
+  <form action="" enctype="multipart/form-data">
+    <input type="text" name="className" placeholder="className">
+    <input type="file" name="thumbnail">
+</form>
+<button onclick="createClass()">create</button>
+<div class="classList">
+
+</div>
+</main>
+
+<footer>
+  <%- include('../components/footer'); %>
+</footer>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/public/js/creaeteClass.js"></script>
+</html>

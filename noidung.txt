@@ -1,0 +1,109 @@
+npm init 
+
+npm i express
+
+require
+tạo app
+
+app.get('link', function(req,res){
+  res.send('asdasdasd')
+})
+
+res.send()                gui gửi thông điệp ra ngoài, có thẻ gửi html
+
+res.json()                gửi dữ liệu dạng json ra ngoài
+
+res.sendFile()            gửi file lên giao diện, phải là đường dẫn tuyệt đối
+
+mỗi đường dẫn chỉ gửi 1 response
+
+app.use('link',express.static)            gửi 1 folder ra ngoài
+
+tạo port
+
+querry                    gửi data từ client về server qua url
+                          ?key=value&key1=value1
+
+params                    gửi data từ client về server qua url
+                          cài đặt đường dẫn /:tênKey 
+                          đã đặt params là buộc phải dùng đủ
+
+resful API
+
+GET                       render giao diện, 
+                          lấy data
+                          data sẽ được show lên giao diện
+
+POST                      tạo mới data
+                          chức năng khác
+                          data được gửi ngầm
+
+PUT                       Update data
+
+DELETE                    delete data
+
+url                       trong Url có tên bảng mà API tương tác
+                          trong trường hợp findOne, updateOne, deleteOne thì phải cụ thể id trên params
+
+Các API được phân biệt dựa vào method và url
+
+router                    rẽ nhánh giảm tải file app.js
+
+====================================================
+
+async / await             biến promise thành code chạy đồng bộ
+                          đi liền với nhau
+                          thay thê cho promise
+
+
+async function ten (){
+  try{
+    code chạy đồng bộ
+    const kq = await promise1
+    await promise2 (kq)
+  }
+  catch(err){
+    bắt lỗi
+  }
+}
+
+arrow function            cú pháp tương tự function
+                          this
+
+function ten (a,b,c){}    hoisting hoạt động bt
+
+var ten = (a,b,c) => {}   chỉ dùng đc sau khi gán vào biến, thường dùng trong callback
+
+cookie                    bộ nhớ của trình duyệt lưu thông tin do user cung cấp
+                          cookie luôn đc gửi kèm trong req.headers
+
+
+cookie-parser             hỗ trợ chuyển đổi cookie về object
+
+jsonwebtoken              tạo ra chuỗi mã hóa và dịch chuỗi mã hóa thông qua mật khẩu
+
+bcrypt                    mã hóa mật khẩu và so sánh, k dịch ngược
+
+middleWare                là những bước sàng lọc trước khi cho phép thực hiện chức năng 
+                          sàng lọc đăng nhập hay chưa, quyền ...
+
+
+multer                    upload file
+                          form phải có entype='multipart/formdata'
+                          input phải có name
+                          input type='file' phải có name khớp với multer.upload
+
+                          dùng FormData đề gửi request
+                          $.ajax phải có thêm setting
+                          processData: false,
+                          contentType: false,
+
+EJS                       là view engine để làm giao diện hiển thị
+                          app.set('view engine','ejs')
+                          luôn tìm kiếm trong folder views
+                          res.render('folder/file',{data})
+                          cú pháp trong file ejs giống html
+                          có thể tách nhỏ giao diện ra các file riêng để tái sử dụng
+
+<%- %>                    gọi biến và chuyển sang html nếu đc
+<%= %>                    gọi biến 
